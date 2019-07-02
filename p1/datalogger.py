@@ -1,7 +1,7 @@
 import os
 import sys
 import logging
-from datatime import datatime
+from datetime import datetime
 
 logger = logging.getLogger(__name__)
 

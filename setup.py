@@ -26,10 +26,10 @@ setup(
     license="gpl-3.0",
     author="Pascal Prins",
     author_email="pascal.prins@foobar-it.com",
-    description="Omnik Data Logger",
+    description="P1 Data Logger",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/paprins/omnik-data-logger",
+    url="https://github.com/paprins/p1-data-logger",
     packages = find_packages(),
     classifiers=[
         'Development Status :: 4 - Beta',
@@ -39,5 +39,5 @@ setup(
         "Operating System :: OS Independent",
     ],
     install_requires = install_requires,
-    scripts=['bin/omnik-logger'],
+    scripts=['bin/p1-logger'],
 )
