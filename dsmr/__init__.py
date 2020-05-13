@@ -1,6 +1,8 @@
 
 import os
 import sys
+import toml
+from pathlib import Path
 import logging
 import time
 from threading import Timer
@@ -9,7 +11,12 @@ from .datalogger import DataLogger
 
 logging.basicConfig(stream=sys.stdout, level=os.environ.get('LOGLEVEL', logging.INFO))
 
-__version__ = '0.0.1'
+def get_version():
+   path = Path(__file__).resolve().parents[1] / 'pyproject.toml'
+   pyproject = toml.loads(open(str(path)).read())
+   return pyproject['tool']['poetry']['version']
+
+__version__ = get_version()
 
 class RepeatedJob(object):
   def __init__(self, interval, function, *args, **kwargs):
